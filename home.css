@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+:root {
+    --my-nav-color: #011425;
+    --my-written-color: #FFFFFF;
+    --my-grey-color: #242424;
+    --my-light-color: #537C89;
+    --my-dark-color: #1F4959;
+}
+
+body {
+    min-height: 100vh;
+}
+
+/* ================= NAVBAR ================= */
+
+header {
+    background: var(--my-nav-color);
+    padding: 15px 8%;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffcc00;
+}
+
+/* ================= MAIN SECTION ================= */
+
+.main {
+    background-color: var(--my-light-color);
+    min-height: calc(100vh - 70px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 8%;
+    gap: 40px;
+}
+
+/* TEXT SIDE */
+
+.info {
+    flex: 1;
+    max-width: 500px;
+}
+
+.info h1 {
+    font-size: 38px;
+    color: white;
+}
+
+.name {
+    color: var(--my-nav-color);
+}
+
+.info p {
+    font-size: 18px;
+    margin: 20px 0;
+    color: white;
+    line-height: 1.6;
+}
+
+/* BUTTON */
+
+.btn {
+    background: linear-gradient(45deg, #ffcc00, #ff33cc, #00ffcc, #33ccff, #ff6600);
+    height: 50px;
+    width: 100%;
+    max-width: 250px;
+    font-weight: 700;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+/* IMAGE SIDE */
+
+.profile-pic {
+    flex: 1;
+    text-align: center;
+}
+
+.profile-pic img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
+@media (max-width: 992px) {
+    .main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info {
+        max-width: 100%;
+    }
+
+    .profile-pic {
+        margin-top: 30px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .info h1 {
+        font-size: 28px;
+    }
+
+    .info p {
+        font-size: 16px;
+    }
+
+    .btn {
+        max-width: 100%;
+    }
+}

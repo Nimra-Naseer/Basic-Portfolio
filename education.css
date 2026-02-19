@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+
+/* ================= ROOT ================= */
+
+:root {
+    --dark: #011425;
+    --light: #64a6ba;
+    --white: #ffffff;
+    --gradient: linear-gradient(135deg,
+        #010f1c 10%,
+        #041f2d 40%,
+        #0b3a4a 70%,
+        #164b5c 100%);
+}
+
+/* ================= RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background: var(--light);
+    color: var(--dark);
+}
+
+/* ================= NAVBAR ================= */
+
+header {
+    background: var(--gradient);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    flex-wrap: wrap;
+}
+
+.logo {
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.7;
+}
+
+/* ================= PAGE HEADER ================= */
+
+.page-header {
+    background: var(--gradient);
+    text-align: center;
+    padding: 50px 20px;
+    color: var(--white);
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+}
+
+.page-header p {
+    margin-top: 10px;
+}
+
+/* ================= EDUCATION SECTION ================= */
+
+.education-section {
+    width: 100%;
+    padding: 50px 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* ================= CARD ================= */
+
+.edu-card {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 25px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #6dd5ed, #2193b0);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+    flex-wrap: wrap;
+}
+
+.edu-card:hover {
+    transform: translateY(-5px);
+}
+
+/* ================= IMAGE ================= */
+
+.edu-img img {
+    width: 120px;
+    max-width: 100%;
+    height: auto;
+    background: #e0f7fa;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+/* ================= TEXT ================= */
+
+.edu-text {
+    flex: 1;
+    min-width: 250px;
+}
+
+.edu-text h2 {
+    margin-bottom: 10px;
+}
+
+.edu-text p {
+    line-height: 1.6;
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+    background: var(--gradient);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
+@media (max-width: 992px) {
+    .page-header h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .nav {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .nav-links {
+        justify-content: center;
+    }
+
+    .edu-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .education-section {
+        padding: 30px 20px;
+    }
+
+    .edu-img img {
+        width: 100px;
+    }
+
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+}

@@ -1,0 +1,166 @@
+/* ===== Root Color Variables ===== */
+:root {
+    --my-background-color: hsl(208, 95%, 7%);
+    --my-body-color: #87f4fa;
+    --black-color: #242424;
+    --my-light-color: #537C89;
+    --my-dark-color: #1F4959;
+}
+
+/* ===== Reset ===== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ===== Navbar ===== */
+header{
+    width:100%;
+    background: var(--my-dark-color);
+    padding:15px 5%;
+}
+
+.nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.logo{
+    color:white;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.nav-links{
+    display:flex;
+    gap:20px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    font-size:14px;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color: var(--my-body-color);
+}
+
+/* ===== Body ===== */
+body{
+    background: var(--my-background-color);
+}
+
+/* ===== Main Card ===== */
+.about{
+    width:90%;
+    max-width:1000px;
+    background: var(--my-body-color);
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    margin:40px auto;
+}
+
+.about-container{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:40px;
+}
+
+.profile img{
+    width:250px;
+    max-width:100%;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+.content{
+    flex:1;
+}
+
+/* ===== Headings ===== */
+h1{
+    margin-bottom:20px;
+    color: var(--my-dark-color);
+}
+
+h2{
+    margin-top:15px;
+    margin-bottom:8px;
+    color: var(--my-light-color);
+    font-size:18px;
+}
+
+/* ===== Paragraphs ===== */
+p{
+    color: var(--black-color);
+    line-height:1.6;
+    margin-bottom:10px;
+}
+
+/* ===== Inspiration Section ===== */
+.inspiration ul{
+    list-style:none;
+    margin-top:5px;
+}
+
+.inspiration li{
+    margin-bottom:5px;
+    font-weight:500;
+    color: var(--black-color);
+}
+
+/* ===== Buttons ===== */
+.buttons{
+    margin-top:20px;
+}
+
+.buttons a{
+    text-decoration:none;
+    background: var(--my-dark-color);
+    color: white;
+    padding:8px 18px;
+    border-radius:20px;
+    margin-right:10px;
+    transition:0.3s;
+    display:inline-block;
+}
+
+.buttons a:hover{
+    background: var(--my-light-color);
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px){
+
+    .nav{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:10px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        gap:10px;
+    }
+
+    .about{
+        padding:20px;
+    }
+
+    .about-container{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .profile img{
+        width:200px;
+    }
+}
